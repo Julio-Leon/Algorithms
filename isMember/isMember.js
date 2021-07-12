@@ -1,11 +1,13 @@
 words = ["bing", "bang", "boom"];
 
 const isMember = (arr, str) => {
+    if (arr.includes(str)) return true
     for (let i = 0; i < arr.length; i++) {
         let isInArray = true
         for (let j = 0; j < arr[i].length; j++) {
             if (arr[i].length !== str.length) {
                 isInArray = false
+                break
             }
             if (str.charAt(j) === '*') {
                 continue;
